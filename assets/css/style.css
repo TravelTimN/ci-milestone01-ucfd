@@ -1,0 +1,237 @@
+/****************************************************************************************/
+/* ROOT STYLES */
+:root {
+    --paulBluePrimary: #90CAF9;                /* to use =    color: var(--paulBluePrimary);  */
+    --paulBlueLight: #C3FDFF;                  /* to use =    color: var(--paulBlueLight);    */
+    --paulBlueDark: #5D99C6;                   /* to use =    color: var(--paulBlueDark);     */
+    --paulBlueDarkRGBA: rgba(93,153,198,0.95); /* to use =    color: var(--paulBlueDarkRGBA); */
+    --paulPurplePrimary: #9B27AF;              /* to use =    color: var(--paulPurplePrimary);*/
+    --paulPurpleLight: #CF5CE2;                /* to use =    color: var(--paulPurpleLight);  */
+    --paulPurpleDark: #69007F;                 /* to use =    color: var(--paulPurpleDark);   */
+    --bgWhite: #F4F4F4;                        /* to use =    color: var(--bgWhite);          */
+    --white: #FFFFFF;                          /* to use =    color: var(--white);            */
+    --black: #000000;                          /* to use =    color: var(--black);            */
+    --darkGray: #212121;                       /* to use =    color: var(--darkGray);         */
+    --darkGrayRGBA: rgba(0,0,0,0.97);          /* to use =    color: var(--darkGrayRGBA);     */
+    --fontFamily: 'Open Sans', sans-serif;       /* to use =    font-family: var(--fontFamily); */
+    --textShadow: 2px 2px 0 rgba(0,0,0,1);     /* to use =    text-shadow: var(--textShadow); */ 
+}
+/* root styles */
+/****************************************************************************************/
+
+/* DEFAULT SETTINGS */
+* {
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 0;
+    font-family: var(--fontFamily);
+}
+body {
+    background-color: var(--bgWhite);
+    color: var(--darkGray);
+}
+/* default settings */
+/*--------------------  --------------------*/
+/*--------------------  --------------------*/
+
+
+/*-------------------- HEADER --------------------*/
+header {
+    background-color: var(--darkGray);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100vw;
+    height: 50px;
+    padding: 5px;
+}
+header a.open {
+    color: var(--white);
+    font-size: 1.5em;
+    margin: 0 0.1em;
+}
+/*-------------------- header --------------------*/
+
+/*-------------------- NAV --------------------*/
+nav {
+    background-color: var(--darkGray);
+    top: 0;
+    position: sticky;
+    z-index: 100;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin-right: 0px;
+}
+nav ul li {
+    min-width: 7vw;
+    line-height: 2;
+    -webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+nav a {
+    color: var(--white);
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+nav a.active {
+    font-weight: bolder;
+    color: var(--paulBluePrimary);
+}
+nav ul li:hover a {
+    color: var(--paulBlueDark);
+}
+/* NAV MEDIA QUERIES */
+@media only screen and (max-width: 599px) {
+    header {
+        top: 0;
+        position: sticky;
+        z-index: 10;
+    }  
+    nav {
+        top: 0;
+        bottom: 0;
+        min-height: 100vh;
+        position: fixed;
+        width: 100vw;
+        left: -100vw;
+        z-index: 100;
+        background-color: var(--darkGrayRGBA);
+        -webkit-transition: all 0.3s ease-in-out;
+           -moz-transition: all 0.3s ease-in-out;
+             -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+    }  
+    nav ul {
+        text-align: center;
+        text-indent: 2em;
+    }
+    nav ul li:hover a {
+        color: var(--paulBlueDark);
+    }
+    nav:target {
+        transform: translateX(100vw);
+    }
+    .close {
+        text-align: right;
+        display: block;
+        text-decoration: none;
+        font-size: 1.5em;
+        position: relative;
+        padding: 0.7em 0.5em 0 0;
+        -webkit-transition: 0.3s ease-in-out;
+           -moz-transition: 0.3s ease-in-out;
+             -o-transition: 0.3s ease-in-out;
+                transition: 0.3s ease-in-out;
+    }
+}
+@media only screen and (min-width: 600px) {
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    .toggle { /* hide toggle */
+        display: none;
+    }
+    .social-links a {
+        font-size: 2em;
+    }
+}
+/*-------------------- nav --------------------*/
+
+/*-------------------- SECTION --------------------*/
+section {
+    max-width: 100vw;
+}
+section > article {
+    padding: 20px;
+}
+
+/*-------------------- ASIDE --------------------*/
+aside {
+    background-color: var(--paulBluePrimary);
+    padding: 20px;
+}
+
+/*-------------------- FOOTER --------------------*/
+footer {
+    background-color: var(--darkGray);
+    color: var(--white);
+    padding: 20px;
+}
+footer ul {
+    list-style: none;
+    text-align: center;
+    margin-right: 0px;
+}
+footer ul li {
+    display: inline-block;
+}
+footer ul li a {
+    font-size: 5vw;
+    color: var(--white);
+    text-shadow: var(--textShadow);
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+footer ul li a i {
+    padding: 0.2em;
+    margin: 0 0.2em;
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+footer ul li a i:hover {
+    transform: scale(1.5);
+}
+footer ul li:hover .facebook {
+    color: #3B5999;
+}
+footer ul li:hover .youtube {
+    color: #FF0000;
+}
+footer ul li:hover .twitter {
+    color: #1DA1F2;
+}
+footer ul li:hover .instagram {
+    color: #E1306C;
+}
+footer ul li:hover .bandcamp {
+    color: #629AA9;
+}
+footer ul li:hover .spotify {
+    color: #1DB954;
+}
+footer ul li:hover .google {
+    color: #00CFFF;
+}
+footer ul li:hover .itunes {
+    color: #FF5C6D;
+}
+.footer-signature {
+    text-align: center;
+    padding: 10px 0;
+}
+.footer-signature a {
+    color: var(--white);
+}
+.footer-signature a:hover {
+    border-bottom: 1px solid;
+}
+.copyright {
+    border-right: 1px solid var(--white);
+}
+.designer {
+    display: inline-block;
+    margin-left: 5px;
+}

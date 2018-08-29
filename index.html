@@ -9,53 +9,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- LINKS -->
+    <!-- decided against Bootstrap vs CSS Grid instead -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel='icon' href="./assets/images/flavicon.ico" type="image/x-icon">
 
-    <title>PAUL M Music</title>
+    <title>Paul M Music | Paul Middleton</title>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header id="header">
-        <h1>PAUL M</h1>
-        <a class="toggle open" href="#nav">
-            <i class="fas fa-bars fa-fw"></i>
-        </a>
-    </header>
-    <!-- header -->
+    <div class="navbar-container">
+        <!-- HEADER -->
+        <header class="navbar-header">
+            <h1>PAUL M</h1>
+        </header>
+        <!-- header -->
+        
+        <!-- MENU -->
+        <div class="navbar-menu">
+            <i class="fas fa-bars fa-fw navbar-toggle toggle-open" onclick="navbarOpen()"></i>
+        </div>
+        <!-- menu -->
 
-    <!-- NAV -->
-    <nav id="nav">
-        <a class="toggle close" href="#">
-            <i class="fas fa-times fa-fw"></i>
-        </a>
-        <ul>
-            <li>
-                <a href="index.html"class="active">Home</a>
-            </li>
-            <li>
-                <a href="music.html">Music</a>
-            </li>
-            <li>
-                <a href="videos.html">Videos</a>
-            </li>
-            <li>
-                <a href="photos.html">Photos</a>
-            </li>
-            <li>
-                <a href="testimonials.html">Testimonials</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- nav -->
+        <!-- NAV -->
+        <nav id="navbar-nav" class="navbar-nav">
+            <a href="javascript:void(0)" class="navbar-toggle toggle-close" onclick="navbarClose()">
+                <i class="fas fa-times fa-fw"></i>
+            </a>
+            <ul>
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="music.html">Music</a>
+                </li>
+                <li>
+                    <a href="videos.html">Videos</a>
+                </li>
+                <li>
+                    <a href="photos.html">Photos</a>
+                </li>
+                <li>
+                    <a href="testimonials.html">Testimonials</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- nav -->
+    </div>
 
     <!-- SECTION -->
     <section>
@@ -118,8 +124,8 @@
     <!-- aside -->
 
     <!-- FOOTER -->
-    <footer>
-        <div class="social-links">
+    <footer class="footer-container">
+        <div class="footer-social">
             <ul>
                 <li><a href="https://www.facebook.com/paulmiddletonofficial" target="_blank"><i class="fab fa-facebook-f facebook" aria-hidden="true"></i></a></li>
                 <li><a href="https://www.youtube.com/user/paulmiddletonmusic" target="_blank"><i class="fab fa-youtube youtube" aria-hidden="true"></i></a></li>
@@ -139,6 +145,17 @@
     <!-- footer -->
 
     <!-- SCRIPTS -->
+    <script>
+        // Approved by mentor (Ignatius Ukwuoma) to use basic JS to incorporate menu transition since I already have some basic JS-skils
+        // onClick will display navbar-nav to full 100% height
+        function navbarOpen() {
+            document.getElementById("navbar-nav").style.height="100%";
+        }
+        // onClick will close navbar-nav back to 0% height
+        function navbarClose() {
+            document.getElementById("navbar-nav").style.height="0%";
+        }
+    </script>
 </body>
 
 </html>

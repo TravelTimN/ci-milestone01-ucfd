@@ -129,12 +129,34 @@ body {
 /*-------------------- navbar-container mobile --------------------*/
 
 
-/*-------------------- SECTION --------------------*/
+/*-------------------- MAIN --------------------*/
 .main-img {
     height: 65vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+.index-img {
     background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-007.jpg) top right no-repeat;
     background-size: cover;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+.music-img {
+    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-005.jpg) center no-repeat;
+    background-size: cover;
+}
+.videos-img {
+    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-013.jpg) center 10% no-repeat;
+    background-size: cover;
+}
+.photos-img {
+    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-008.jpg) right 10% no-repeat;
+    background-size: cover;
+}
+.testimonials-img {
+    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-006.jpg) right no-repeat;
+    background-size: cover;
+}
+.contact-img {
+    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-018.jpg) left 30% no-repeat;
+    background-size: cover;
 }
 .main-header {
     grid-area: main-header;
@@ -174,7 +196,7 @@ body {
         "main-header"
         "main-section";
 }
-/*-------------------- section --------------------*/
+/*-------------------- main --------------------*/
 
 /*-------------------- FOOTER --------------------*/
 .footer-social {

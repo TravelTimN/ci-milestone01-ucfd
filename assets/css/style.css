@@ -33,7 +33,7 @@ body {
 }
 
 .hr-standard {
-    border: 3px solid var(--paulPurpleLight);
+    border: 3px solid var(--paulBlueDark);
     width: 80vw;
     margin: 50px auto;
 }
@@ -41,7 +41,7 @@ body {
     border-radius: 50%;
 }
 .rounded-img {
-    border-radius: 20px;
+    border-radius: 10px;
 }
 /* default settings */
 
@@ -177,9 +177,67 @@ body {
 }
 /*-------------------- main --------------------*/
 
+/*-------------------- PHOTOS --------------------*/
+/*----- make images black/white, but transition to full-color on hover*/
+.gallery-container img {
+    filter: grayscale(100%);
+    -webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+.gallery-container img:hover {
+    filter: grayscale(0%);
+}
+/* end of possible black/white filter idea -----*/
+.gallery-img {
+    position: relative;
+    text-align: center;
+    border: 2px solid #CCCCCC;
+    padding: 10px;
+}
+.gallery-img img {
+    width: 250px;
+}
+.gallery-text {
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0.5em;
+    font-weight: bold;
+    background-color: var(--darkGrayRGBA);
+    -webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+.gallery-container a,
+.gallery-container a:hover,
+.gallery-container a:active,
+.gallery-container a:focus {
+    color: var(--white);
+}
+.gallery-container img:hover ~ .gallery-text {
+    opacity: 0;
+}
+.gallery-container {
+    margin: 0 auto;
+    align-self: center;
+    justify-items: center;
+    max-width: 80vw;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+}
+/*-------------------- photos --------------------*/
+
 /*-------------------- TESTIMONIALS & CLIENTS --------------------*/
 .testimonials {
     grid-area: testimonials;
+    cursor: pointer;
 }
 .testimonials-container {
     grid-area: testimonials-container;
@@ -192,6 +250,9 @@ body {
     font-size: 1.5em;
     color: var(--black);
     text-align: center;
+}
+.testimonial:hover {
+    border: 2px solid var(--paulPurpleDark);
 }
 .testimonial-header {
     grid-area: testimonial-header;
@@ -326,9 +387,13 @@ footer ul li:hover .itunes {
 }
 .footer-signature a {
     color: var(--white);
+    -webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
 }
 .footer-signature a:hover {
-    border-bottom: 1px solid;
+    color: var(--paulPurpleLight);
 }
 .copyright {
     border-right: 1px solid var(--white);
@@ -438,7 +503,7 @@ footer ul li:hover .itunes {
             left: 5em;
         }
         100% {
-            left: -470em;
+            left: -480em;
         }
     }
     /* client slider (max 799px) */
@@ -475,7 +540,20 @@ footer ul li:hover .itunes {
     }
     /* main section (min 800px) */
 
+    /* PHOTOS (min 800px) */
+    .gallery-container {
+        max-width: 80vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 30px;
+    }
+    /* photos (min 800px) */
+
     /* TESTIMONIALS (min 800px) */
+    .testimonial-img {
+        max-width: 10vw;
+    }
     .testimonial {
         width: 30vw;
         align-self: start;

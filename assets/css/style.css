@@ -189,7 +189,7 @@ body {
     margin-bottom: 100px;
 }
 .videos-container {
-    max-width: 50vw;
+    max-width: 80vw;
     text-align: center;
 }
 .video-container {
@@ -589,6 +589,12 @@ footer ul li:hover .itunes {
             "main-section main-section";
     }
     /* main section (min 800px) */
+
+    /* VIDEOS (min 800px) */
+    .videos-container {
+        max-width: 60vw;
+    }
+    /* videos (min 800px) */
 
     /* TESTIMONIALS (min 800px) */
     .testimonial-img {

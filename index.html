@@ -9,33 +9,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- LINKS -->
-    <!-- decided against Bootstrap vs CSS Grid instead -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <link rel='icon' href="./assets/images/flavicon.ico" type="image/x-icon">
+    <link rel='icon' href="assets/images/flavicon.ico" type="image/x-icon">
 
     <title>Paul M Music | Paul Middleton</title>
 </head>
 
 <body>
 
-    <div class="navbar-container">
-        <!-- HEADER -->
-        <header class="navbar-header">
+    <!-- HEADER / NAV -->
+    <header class="navbar-container">
+
+        <!-- LOGO -->
+        <div class="logo">
             <h1>PAUL M</h1>
-        </header>
-        <!-- header -->
-        
+        </div>
+
         <!-- MENU -->
         <div class="navbar-menu">
             <i class="fas fa-bars fa-fw navbar-toggle toggle-open" onclick="navbarOpen()"></i>
         </div>
-        <!-- menu -->
 
         <!-- NAV -->
-        <nav id="navbar-nav" class="navbar-nav">
+        <nav id="navbar-nav" class="navbar-nav text-upper">
             <a href="javascript:void(0)" class="navbar-toggle toggle-close" onclick="navbarClose()">
                 <i class="fas fa-times fa-fw"></i>
             </a>
@@ -60,57 +57,101 @@
                 </li>
             </ul>
         </nav>
-        <!-- nav -->
-    </div>
-
-    <!-- MAIN IMAGE -->
-    <div class="main-img index-img"></div>
-    <!-- main image -->
+    </header>
 
     <!-- MAIN SECTION -->
     <main class="main-container">
-        <header class="main-header">
-            <h2>About Paul</h2>
-        </header>
-        <section class="main-section">
-            <p>As a London-based performer with over 20 years’ experience in the music industry, Paul Middleton has performed around the world, including the USA, Jordan, Spain, Germany, Belgium, Ireland, and all around the UK.</p>
-            <br>
-            <p>He is a talented international singer and songwriter, currently with two successful albums already released, and a third album scheduled to be released in October 2018. In addition to both albums, (<a href="https://paulmiddleton.bandcamp.com/album/covers" target="_blank">Covers</a> and <a href="https://open.spotify.com/album/7I8QzJHOjWAIU3cV1aDVNb?si=26GxLvTFRTaGVPBfmy9uKQ" target="_blank">Covers 2</a>) he has also written the title track for the 2017 motion picture “<cite title="Hanging in There">Hanging in There</cite>”.</p>
+
+        <!-- TOP IMAGE -->
+        <section class="top-img index-img"></section>
+
+        <!-- BODY -->
+        <section class="body-container">
+            <header class="body-title">
+                <h2 class="text-upper">Paul Middleton</h2>
+                <h3 class="text-lower">singer | songwriter</h3>
+            </header>
+            <section class="body-section">
+                <p>As a London-based performer with over 20 years’ experience in the music industry, Paul Middleton has performed
+                    around the world, including the USA, Jordan, Spain, Germany, Belgium, Ireland, and all around the UK.
+                </p>
+                <p>He is a talented international singer and songwriter, currently with two successful albums already released,
+                    and a third album scheduled to be released in October 2018. In addition to both albums
+                    (<a href="https://paulmiddleton.bandcamp.com/album/covers" target="_blank">Covers</a> and
+                    <a href="https://open.spotify.com/album/7I8QzJHOjWAIU3cV1aDVNb?si=26GxLvTFRTaGVPBfmy9uKQ" target="_blank">Covers 2</a>),
+                    he has also written the title track for the 2017 motion picture
+                    “<cite title="Hanging in There">Hanging in There</cite>”.
+                </p>
+            </section>
         </section>
     </main>
-    <!-- main section -->
 
     <!-- FOOTER -->
     <footer class="footer-container">
         <div class="footer-social">
             <ul>
-                <li><a href="https://www.facebook.com/paulmiddletonofficial" target="_blank"><i class="fab fa-facebook-f facebook" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.youtube.com/user/paulmiddletonmusic" target="_blank"><i class="fab fa-youtube youtube" aria-hidden="true"></i></a></li>
-                <li><a href="https://twitter.com/paulmmusic" target="_blank"><i class="fab fa-twitter twitter" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.instagram.com/paulmmusic" target="_blank"><i class="fab fa-instagram instagram" aria-hidden="true"></i></a></li>
-                <li><a href="https://paulmiddleton.bandcamp.com/merch" target="_blank"><i class="fab fa-bandcamp bandcamp" aria-hidden="true"></i></a></li>
-                <li><a href="https://open.spotify.com/artist/5mjRfG1TxOSSXeYOsKQQJh" target="_blank"><i class="fab fa-spotify spotify" aria-hidden="true"></i></a></li>
-                <li><a href="https://play.google.com/store/music/artist/Paul_Middleton?id=Aldnrb4wcvqju7npbpf5owy4kum" target="_blank"><i class="fab fa-google-play google" aria-hidden="true"></i></a></li>
-                <li><a href="https://itunes.apple.com/ie/artist/paul-middleton/202782999" target="_blank"><i class="fab fa-itunes itunes" aria-hidden="true"></i></a></li>
+                <li>
+                    <a href="https://www.facebook.com/paulmiddletonofficial" target="_blank">
+                        <i class="fab fa-facebook-f facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/paulmiddletonmusic" target="_blank">
+                        <i class="fab fa-youtube youtube" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/paulmmusic" target="_blank">
+                        <i class="fab fa-twitter twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/paulmmusic" target="_blank">
+                        <i class="fab fa-instagram instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://paulmiddleton.bandcamp.com/merch" target="_blank">
+                        <i class="fab fa-bandcamp bandcamp" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://open.spotify.com/artist/5mjRfG1TxOSSXeYOsKQQJh" target="_blank">
+                        <i class="fab fa-spotify spotify" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://play.google.com/store/music/artist/Paul_Middleton?id=Aldnrb4wcvqju7npbpf5owy4kum" target="_blank">
+                        <i class="fab fa-google-play google" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://itunes.apple.com/ie/artist/paul-middleton/202782999" target="_blank">
+                        <i class="fab fa-itunes itunes" aria-hidden="true"></i>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="footer-signature">
-            <span class="copyright">Copyright &copy; 2018 <a href="index.html">Paul Middleton</a> </span>
-            <span class="designer">Website by <a href="https://github.com/TravelTimN" target="_blank">Tim Nelson</a></span>
+            <span class="copyright">Copyright &copy; 2018
+                <a href="index.html">Paul Middleton</a>
+            </span>
+            <span class="designer">Website by
+                <a href="https://github.com/TravelTimN" target="_blank">Tim Nelson</a>
+            </span>
         </div>
     </footer>
-    <!-- footer -->
 
     <!-- SCRIPTS -->
     <script>
-        // Approved by mentor (Ignatius Ukwuoma) to use basic JS to incorporate menu transition since I already have some basic JS-skils
-        // onClick will display navbar-nav to full 100% height
+        // approved by mentor (Ignatius Ukwuoma) to use basic JS to incorporate menu transition
+        // onClick displays navbar-nav to full 100% height
         function navbarOpen() {
-            document.getElementById("navbar-nav").style.height="100%";
+            document.getElementById("navbar-nav").style.height = "100%";
         }
-        // onClick will close navbar-nav back to 0% height
+        // onClick closes navbar-nav back to 0% height
         function navbarClose() {
-            document.getElementById("navbar-nav").style.height="0%";
+            document.getElementById("navbar-nav").style.height = "0%";
         }
     </script>
 </body>

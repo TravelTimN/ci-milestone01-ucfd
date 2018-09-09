@@ -64,6 +64,9 @@ body {
 .text-lower {
     text-transform: lowercase;
 }
+.span-nowrap {
+    white-space: nowrap;
+}
 
 /*-------------------- NAVBAR-CONTAINER (MOBILE-FIRST) --------------------*/
 .logo {

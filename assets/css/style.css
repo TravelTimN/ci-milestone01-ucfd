@@ -22,7 +22,9 @@
     --itunes: #FF5C6D; /* color: var(--itunes); */
     --darkGray: #212121; /* color: var(--darkGray); */
     --darkGrayRGBA: rgba(0,0,0,0.97); /* color: var(--darkGrayRGBA); */
-    --fontFamily: 'Open Sans', sans-serif; /* font-family: var(--fontFamily); */
+    --fontOpenSans: 'Open Sans', sans-serif; /* font-family: var(--fontOpenSans); */
+    --fontBowlby: 'Bowlby One SC', cursive; /* font-family: var(--fontBowlby); */
+    --fontPoppins: 'Poppins', sans-serif; /* font-family: var(--fontPoppins); */
     --textShadow: 2px 2px 0 rgba(0,0,0,1); /* text-shadow: var(--textShadow); */ 
     --boxShadowHvr: 0px 0px 25px 3px var(--paulBlueDark); /* box-shadow: var(--boxShadowHvr); */
 }
@@ -34,7 +36,7 @@
     text-decoration: none;
     margin: 0 auto;
     padding: 0;
-    font-family: var(--fontFamily);
+    font-family: var(--fontOpenSans);
 }
 body {
     background-color: var(--bgWhite);
@@ -169,8 +171,7 @@ body {
     letter-spacing: 0.1em;
     margin-bottom: 2em;
 }
-.body-title h2,
-.body-title h3 {
+.body-title h1,h2,h3 {
     text-align: center;
 }
 .body-section {
@@ -766,4 +767,13 @@ footer ul li:hover .itunes {
     .footer-social a {
         font-size: 2em;
     }
+}
+
+
+nav a {
+    font-family: var(--fontPoppins);
+}
+.body-title h1 {
+    font-family: var(--fontBowlby);
+    font-size: 2em;
 }

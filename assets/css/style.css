@@ -44,12 +44,12 @@ body {
     width: 80vw;
     margin: 50px auto;
 }
-.hr-videos {
+.hr-small {
     width: 25vw;
     margin: 75px auto;
 }
 .hr-standard,
-.hr-videos {
+.hr-small {
     border: 3px solid var(--paulBlueDark);
 }
 .circle-img {
@@ -63,6 +63,12 @@ body {
 }
 .text-lower {
     text-transform: lowercase;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
 }
 .span-nowrap {
     white-space: nowrap;
@@ -169,7 +175,6 @@ body {
 }
 .body-section {
     grid-area: body-section;
-    text-align: justify;
     line-height: 1.5;
 }
 .body-section p {
@@ -204,6 +209,127 @@ body {
 }
 
 /*-------------------- MUSIC.html --------------------*/
+.music-container,
+.album-container,
+.album-cover,
+.album-title,
+.album-subtext,
+.support-container,
+.bandcamp-container,
+.buy-container,
+.buy-header,
+.buy-text,
+.buy-button,
+.spotify-iframe {
+    align-self: center;
+    justify-items: center;
+}
+.music-container {
+    max-width: 80%;
+    margin-bottom: 50px;
+}
+.album-cover {
+    grid-area: album-cover;
+    border-radius: 10px;
+    width: 50vw;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 25px 3px var(--gray);
+}
+.album-title {
+    grid-area: album-title;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 1.2px;
+    margin: 5px 0;
+}
+.album-subtext {
+    grid-area: album-subtext;
+    font-size: 1.25em;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.album-container {
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "album-cover"
+        "album-title"
+        "album-subtext";
+}
+.buy-header {
+    grid-area: buy-header;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    margin: 5px 0;
+}
+.buy-text {
+    grid-area: buy-text;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+    width: 80%;
+    margin: 10px 0;
+}
+.buy-button {
+    grid-area: buy-button;
+    width: 10em;
+    margin: 5px 0;
+}
+.bandcamp-container {
+    grid-area: bandcamp-container;
+}
+.buy-container {
+    grid-area: buy-container;
+}
+.bandcamp-container img,
+.buy-container img,
+.spotify-iframe img {
+    -webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+.bandcamp-container img:hover,
+.buy-container img:hover,
+.spotify-iframe img:hover {
+    transform: scale(1.1);
+}
+.bandcamp-container,
+.buy-container,
+.spotify-iframe {
+    box-shadow: 0px 0px 25px 3px var(--gray);
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid var(--gray);
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "buy-header"
+        "buy-text"
+        "buy-button";
+}
+.spotify-iframe {
+    margin-bottom: 0;
+}
+.spotify-iframe iframe {
+    margin-top: 10px;
+    width: 100%;
+}
+.support-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "bandcamp-container"
+        "buy-container"
+        "spotify-iframe";
+}
 
 /*-------------------- VIDEOS.html --------------------*/
 .videos-section {
@@ -338,7 +464,6 @@ a.youtube-link:hover {
 .testimonial-text {
     grid-area: testimonial-text;
     color: var(--darkGray);
-    text-align: justify;
     line-height: 1.5;
     -webkit-transition: all 0.3s ease-in-out;
        -moz-transition: all 0.3s ease-in-out;
@@ -564,6 +689,22 @@ footer ul li:hover .itunes {
     .navbar-nav ul li {
         display: inline-block;
         margin: 0 10px;
+    }
+
+    /* MUSIC.html */
+    .album-cover {
+        width: 30vw;
+    }
+    .album-container,
+    .support-container {
+        align-self: start;
+    }
+    .music-album-container {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "album-container support-container";
     }
 
     /* VIDEOS.html */

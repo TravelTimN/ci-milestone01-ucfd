@@ -110,11 +110,13 @@ body {
 }
 
 /*-------------------- NAVBAR-NAV --------------------*/
+
 .navbar-nav ul {
     list-style: none;
     text-align: center;
 }
 .navbar-nav a {
+    font-family: var(--fontPoppins);
     color: var(--white);
     -webkit-transition: all 0.3s ease-in-out;
        -moz-transition: all 0.3s ease-in-out;
@@ -170,9 +172,11 @@ body {
     grid-area: body-title;
     letter-spacing: 0.1em;
     margin-bottom: 2em;
-}
-.body-title h1,h2,h3 {
     text-align: center;
+}
+.body-title h1 {
+    font-family: var(--fontBowlby);
+    font-size: 2em;
 }
 .body-section {
     grid-area: body-section;
@@ -508,6 +512,68 @@ a.youtube-link:hover {
 }
 
 /*-------------------- CONTACT.html --------------------*/
+.form-container {
+    width: 80vw;
+    margin-bottom: 50px;
+}
+.form-container fieldset {
+    padding: 50px;
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+	border-radius: 8px;
+    box-shadow: 0px 0px 25px 3px var(--gray);
+}
+.form-legend {
+    border: 1px solid var(--gray);
+    box-shadow: 0px 0px 25px 3px var(--gray);
+    background: var(--white);
+    color: var(--paulBlueDark);
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 0 30px;
+}
+.form-label {
+    margin: 10px 0;
+    font-weight: bold;
+}
+.form-input input,
+.form-input textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid var(--paulBlueDark);
+    background-color: rgba(93,153,198,0.1);
+}
+.form-input input::placeholder,
+.form-input textarea::placeholder {
+    color: var(--paulBlueDark);
+    padding-left: 15px;
+}
+.form-button {
+    border: 1px solid var(--paulBlueDark);
+    background-color: rgba(93,153,198,0.75);
+    font-family: var(--fontOpenSans);
+    color: var(--darkGray);
+    font-size: 1.25em;
+    font-weight: bold;
+    width: 40%;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 0.25em;
+    -webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+.form-button:hover {
+    transform: scale(1.1);
+    color: var(--white);
+    text-shadow: var(--textShadow);
+    border: 1px solid var(--darkGray);
+    background: var(--paulBlueDark);
+}
 
 /*-------------------- FOOTER --------------------*/
 .footer-social {
@@ -580,6 +646,7 @@ footer ul li:hover .itunes {
     padding: 20px 0;
 }
 .footer-signature a {
+    font-weight: bold;
     color: var(--white);
     -webkit-transition: all 0.3s ease-in-out;
        -moz-transition: all 0.3s ease-in-out;
@@ -763,17 +830,23 @@ footer ul li:hover .itunes {
         grid-gap: 22px;
     }
 
+    /* CONTACT.html */
+    .form-container {
+        width: 50vw;
+    }
+    .form-container fieldset {
+        padding: 50px;
+        background-color: var(--white);
+        border: 1px solid var(--gray);
+        border-radius: 8px;
+        box-shadow: 0px 0px 25px 3px var(--gray);
+    }
+    .form-button {
+        margin: 10px;
+    }
+
     /* FOOTER */
     .footer-social a {
         font-size: 2em;
     }
-}
-
-
-nav a {
-    font-family: var(--fontPoppins);
-}
-.body-title h1 {
-    font-family: var(--fontBowlby);
-    font-size: 2em;
 }

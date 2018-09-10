@@ -79,7 +79,10 @@ body {
 /*-------------------- NAVBAR-CONTAINER (MOBILE-FIRST) --------------------*/
 .logo {
     grid-area: logo;
-    padding: 0 10px;
+}
+.logo img {
+    max-height: 3em;
+    margin-top: 5px;
 }
 .navbar-menu {
     grid-area: navbar-menu;
@@ -176,7 +179,7 @@ body {
 }
 .body-title h1 {
     font-family: var(--fontBowlby);
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .body-section {
     grid-area: body-section;
@@ -352,6 +355,7 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
     border: 1px solid var(--gray);
+    box-shadow: 0px 0px 25px 3px var(--gray);
     -webkit-transition: all 0.3s ease-in-out;
        -moz-transition: all 0.3s ease-in-out;
          -o-transition: all 0.3s ease-in-out;
@@ -387,6 +391,7 @@ a.youtube-link:hover {
     text-align: center;
     background-color: var(--white);
     border: 1px solid var(--gray);
+    box-shadow: 0px 0px 25px 3px var(--gray);
     border-radius: 15px;
     padding: 10px;
     width: 250px;
@@ -479,6 +484,7 @@ a.youtube-link:hover {
     cursor: pointer;
     border: 1px solid var(--gray);
     background-color: var(--white);
+    box-shadow: 0px 0px 25px 3px var(--gray);
     border-radius: 20px;
     padding: 20px;
     width: 80%;
@@ -743,6 +749,9 @@ footer ul li:hover .itunes {
 
 /*-------------------- @MEDIA QUERIES >800px --------------------*/
 @media only screen and (min-width: 800px) {
+    .body-title h1 {
+        font-size: 2em;
+    }
     /* NAVBAR-NAV */
     .navbar-container {
         display: grid;
@@ -794,6 +803,7 @@ footer ul li:hover .itunes {
         padding: 10px;
         background-color: var(--white);
         border: 1px solid var(--gray);
+        box-shadow: 0px 0px 25px 3px var(--gray);
         border-radius: 15px;
         -webkit-transition: all 0.3s ease-in-out;
            -moz-transition: all 0.3s ease-in-out;

@@ -1,4 +1,7 @@
 /****************************************************************************************/
+/* @IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One|Open+Sans|Poppins');
+
 /* ROOT VARIABLES */
 :root {
     --paulBluePrimary: #90CAF9; /* color: var(--paulBluePrimary); */
@@ -23,7 +26,7 @@
     --darkGray: #212121; /* color: var(--darkGray); */
     --darkGrayRGBA: rgba(0,0,0,0.97); /* color: var(--darkGrayRGBA); */
     --fontOpenSans: 'Open Sans', sans-serif; /* font-family: var(--fontOpenSans); */
-    --fontBowlby: 'Bowlby One SC', cursive; /* font-family: var(--fontBowlby); */
+    --fontBowlby: 'Bowlby One', cursive; /* font-family: var(--fontBowlby); */
     --fontPoppins: 'Poppins', sans-serif; /* font-family: var(--fontPoppins); */
     --textShadow: 2px 2px 0 rgba(0,0,0,1); /* text-shadow: var(--textShadow); */ 
     --boxShadowHvr: 0px 0px 25px 3px var(--paulBlueDark); /* box-shadow: var(--boxShadowHvr); */

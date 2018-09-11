@@ -149,27 +149,27 @@ body {
     border-bottom: 2px solid var(--darkGray);
 }
 .index-img {
-    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-007.jpg) top right no-repeat;
+    background: url(/ci-milestone01-ucfd/assets/images/paul/paul-middleton-007.jpg) top right no-repeat;
     background-size: cover;
 }
 .music-img {
-    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-005.jpg) center no-repeat;
+    background: url(/ci-milestone01-ucfd/assets/images/paul/paul-middleton-005.jpg) center no-repeat;
     background-size: cover;
 }
 .videos-img {
-    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-013.jpg) center 10% no-repeat;
+    background: url(/ci-milestone01-ucfd/assets/images/paul/paul-middleton-013.jpg) center 10% no-repeat;
     background-size: cover;
 }
 .photos-img {
-    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-008.jpg) right 10% no-repeat;
+    background: url(/ci-milestone01-ucfd/assets/images/paul/paul-middleton-008.jpg) right 10% no-repeat;
     background-size: cover;
 }
 .testimonials-img {
-    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-006.jpg) right no-repeat;
+    background: url(/ci-milestone01-ucfd/assets/images/paul/paul-middleton-006.jpg) right no-repeat;
     background-size: cover;
 }
 .contact-img {
-    background: url(/ci-milestone01-ucfd/assets/images/paul/PaulMiddleton-018.jpg) left 30% no-repeat;
+    background: url(/ci-milestone01-ucfd/assets/images/paul/paul-middleton-018.jpg) left 30% no-repeat;
     background-size: cover;
 }
 

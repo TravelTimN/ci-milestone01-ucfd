@@ -699,7 +699,6 @@ footer ul li:hover .itunes {
     color: var(--paulPurpleLight);
 }
 .copyright {
-    border-right: 1px solid var(--white);
     font-size: 1em;
 }
 .designer {

@@ -1,7 +1,7 @@
-/****************************************************************************************/
 /* @IMPORTS */
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One|Open+Sans|Poppins');
 
+/****************************************************************************************/
 /* ROOT VARIABLES */
 :root {
     --paulBluePrimary: #90CAF9; /* color: var(--paulBluePrimary); */
@@ -15,6 +15,8 @@
     --white: #FFFFFF; /* color: var(--white); */
     --black: #000000; /* color: var(--black); */
     --gray: #CCCCCC; /* color: var(--gray); */
+    --darkGray: #212121; /* color: var(--darkGray); */
+    --darkGrayRGBA: rgba(0,0,0,0.97); /* color: var(--darkGrayRGBA); */
     --facebook: #3B5999; /* color: var(--facebook); */
     --youtube: #FF0000; /* color: var(--youtube); */
     --twitter: #1DA1F2; /* color: var(--twitter); */
@@ -23,15 +25,12 @@
     --spotify: #1DB954; /* color: var(--spotify); */
     --google: #00CFFF; /* color: var(--google); */
     --itunes: #FF5C6D; /* color: var(--itunes); */
-    --darkGray: #212121; /* color: var(--darkGray); */
-    --darkGrayRGBA: rgba(0,0,0,0.97); /* color: var(--darkGrayRGBA); */
     --fontOpenSans: 'Open Sans', sans-serif; /* font-family: var(--fontOpenSans); */
     --fontBowlby: 'Bowlby One', cursive; /* font-family: var(--fontBowlby); */
     --fontPoppins: 'Poppins', sans-serif; /* font-family: var(--fontPoppins); */
     --textShadow: 2px 2px 0 rgba(0,0,0,1); /* text-shadow: var(--textShadow); */ 
     --boxShadowHvr: 0px 0px 25px 3px var(--paulBlueDark); /* box-shadow: var(--boxShadowHvr); */
 }
-/* root variables */
 /****************************************************************************************/
 
 /* DEFAULT SETTINGS */
@@ -141,6 +140,37 @@ body {
 /*-------------------- MAIN --------------------*/
 .main-container {
     max-width: 100vw;
+}
+.call-to-action {
+    display: grid;
+    align-self: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+}
+.call-to-action a.button i {
+    font-size: 1.5em;
+    margin-right: 5px;
+    vertical-align: top;
+}
+.call-to-action a.button {
+    margin: 15px;
+    padding: 20px;
+    width: 80%;
+    font-weight: bold;
+    border-radius: 3em;
+    border: 0;
+    color: var(--white);
+    text-shadow: var(--textShadow);
+    background-color: var(--paulBlueDark);
+    -webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+.call-to-action a.button:hover {
+    transform: scale(1.1);
+    background-color: var(--paulPurplePrimary);
+    box-shadow: 0px 7px 7px -2px rgba(0,0,0,0.5);
 }
 
 /*-------------------- TOP IMAGES --------------------*/
@@ -344,7 +374,7 @@ body {
 
 /*-------------------- VIDEOS.html --------------------*/
 .videos-section {
-    max-width: 90vw;
+    max-width: 100vw;
     text-align: center;
     margin-bottom: 100px;
 }
@@ -356,17 +386,6 @@ body {
     overflow: hidden;
     padding-bottom: 56.25%;
     margin-bottom: 20px;
-    border-radius: 10px;
-    border: 1px solid var(--gray);
-    box-shadow: 0px 0px 25px 3px var(--gray);
-    -webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-}
-.video-iframe:hover {
-    border: 1px solid var(--paulBlueDark);
-    box-shadow: var(--boxShadowHvr);
 }
 .video-embed {
     position: absolute;
@@ -375,11 +394,13 @@ body {
     width: 100%;
     height: 100%;
 }
-.video-cite {
+.video-title {
     color: var(--darkGray);
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: bold;
     line-height: 1.3;
+    text-transform: uppercase;
+    font-family: var(--fontBowlby);
 }
 a.youtube-link i {
     color: var(--youtube);
@@ -522,66 +543,78 @@ a.youtube-link:hover {
 
 /*-------------------- CONTACT.html --------------------*/
 .form-container {
-    width: 80vw;
+    max-width: 100%;
     margin-bottom: 50px;
 }
 .form-container fieldset {
-    padding: 50px;
+    padding: 0.5em;
+    width: 80%;
     background-color: var(--white);
-    border: 1px solid var(--gray);
 	border-radius: 8px;
+    border: 1px solid var(--gray);
     box-shadow: 0px 0px 25px 3px var(--gray);
 }
 .form-legend {
-    border: 1px solid var(--gray);
-    box-shadow: 0px 0px 25px 3px var(--gray);
-    background: var(--white);
-    color: var(--paulBlueDark);
+    padding: 0 10%;
+    margin-bottom: 40px;
     font-size: 1.5em;
     font-weight: bold;
+    font-family: var(--fontBowlby);
+    background-color: var(--white);
+    color: var(--paulBlueDark);
     border-radius: 25px;
-    padding: 0 30px;
+    border: 1px solid var(--gray);
+    box-shadow: 0px 0px 25px 3px var(--gray);
+}
+.form-fields {
+    width: 80%;
 }
 .form-label {
-    margin: 10px 0;
+    margin: 5px 0;
+}
+.form-label label {
     font-weight: bold;
+    font-family: var(--fontPoppins);
 }
 .form-input input,
 .form-input textarea {
-    width: 100%;
     margin-bottom: 15px;
-    padding: 10px 5px;
+    padding: 10px 0;
+    width: 100%;
     border-radius: 5px;
+    text-indent: 15px;
     border: 1px solid var(--paulBlueDark);
     background-color: rgba(93,153,198,0.1);
 }
 .form-input input::placeholder,
 .form-input textarea::placeholder {
     color: var(--paulBlueDark);
-    padding-left: 15px;
 }
-.form-button {
-    border: 1px solid var(--paulBlueDark);
-    background-color: rgba(93,153,198,0.75);
-    font-family: var(--fontOpenSans);
-    color: var(--darkGray);
+.form-submit {
+    margin: 25px 0;
+    padding: 20px;
+    width: 80%;
     font-size: 1.25em;
     font-weight: bold;
-    width: 40%;
-    border-radius: 50px;
-    padding: 10px;
-    margin: 0.25em;
+    border-radius: 3em;
+    border: 0;
+    color: var(--white);
+    text-shadow: var(--textShadow);
+    background-color: var(--paulBlueDark);
     -webkit-transition: all 0.3s ease-in-out;
        -moz-transition: all 0.3s ease-in-out;
          -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
 }
-.form-button:hover {
+.form-submit:hover {
     transform: scale(1.1);
-    color: var(--white);
-    text-shadow: var(--textShadow);
-    border: 1px solid var(--darkGray);
-    background: var(--paulBlueDark);
+    background-color: var(--paulPurplePrimary);
+    box-shadow: 0px 7px 7px -2px rgba(0,0,0,0.5);
+}
+.form-buttons {
+    display: grid;
+    align-self: center;
+    justify-items: center;
 }
 
 /*-------------------- FOOTER --------------------*/
@@ -755,6 +788,12 @@ footer ul li:hover .itunes {
     .body-title h1 {
         font-size: 2em;
     }
+    .call-to-action {
+        grid-template-columns: 1fr 1fr;
+    }
+    .call-to-action a.button {
+        font-size: 1.25em;
+    }
     /* NAVBAR-NAV */
     .navbar-container {
         display: grid;
@@ -790,6 +829,23 @@ footer ul li:hover .itunes {
     /* VIDEOS.html */
     .video-container {
         max-width: 65vw;
+    }
+    .video-iframe {
+        border-radius: 10px;
+        border: 1px solid var(--gray);
+        box-shadow: 0px 0px 25px 3px var(--gray);
+        -webkit-transition: all 0.3s ease-in-out;
+           -moz-transition: all 0.3s ease-in-out;
+             -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+    }
+    .video-iframe:hover {
+        border: 1px solid var(--paulBlueDark);
+        box-shadow: var(--boxShadowHvr);
+    }
+    .video-title {
+        font-size: 1.5em;
+        line-height: 1.3;
     }
 
     /* TESTIMONIALS.html */
@@ -844,18 +900,11 @@ footer ul li:hover .itunes {
     }
 
     /* CONTACT.html */
-    .form-container {
-        width: 50vw;
-    }
     .form-container fieldset {
-        padding: 50px;
-        background-color: var(--white);
-        border: 1px solid var(--gray);
-        border-radius: 8px;
-        box-shadow: 0px 0px 25px 3px var(--gray);
+        width: 60%;
     }
-    .form-button {
-        margin: 10px;
+    .form-submit {
+        width: 60%;
     }
 
     /* FOOTER */

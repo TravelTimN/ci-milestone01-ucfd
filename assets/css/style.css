@@ -112,7 +112,6 @@ body {
 }
 
 /*-------------------- NAVBAR-NAV --------------------*/
-
 .navbar-nav ul {
     list-style: none;
     text-align: center;
@@ -132,7 +131,6 @@ body {
 .navbar-nav ul li:hover a {
     color: var(--paulBlueDark);
 }
-
 
 /*-------------------- MAIN --------------------*/
 .main-container {
@@ -748,9 +746,6 @@ footer ul li:hover .itunes {
     }
 
     /* CLIENT SLIDER */
-    /* concept from:
-    https://codepen.io/dudleystorey/pen/ehKpi
-    "Responsive CSS Image Slider" | Dudley Storey */
     .client-slider .slider img {
         width: 10em;
         float: left;

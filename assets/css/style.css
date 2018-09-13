@@ -68,9 +68,6 @@ body {
 .text-lower {
     text-transform: lowercase;
 }
-.text-center {
-    text-align: center;
-}
 .text-justify {
     text-align: justify;
 }
@@ -160,6 +157,7 @@ body {
     border-radius: 3em;
     border: 0;
     color: var(--white);
+    text-align: center;
     text-shadow: var(--textShadow);
     background-color: var(--paulBlueDark);
     -webkit-transition: all 0.3s ease-in-out;
@@ -280,12 +278,14 @@ body {
     grid-area: album-title;
     font-weight: bold;
     font-size: 1.5em;
+    text-align: center;
     letter-spacing: 1.2px;
     margin: 5px 0;
 }
 .album-subtext {
     grid-area: album-subtext;
     font-size: 1.25em;
+    text-align: center;
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
@@ -303,12 +303,14 @@ body {
     grid-area: buy-header;
     font-weight: bold;
     line-height: 1.5;
+    text-align: center;
     letter-spacing: 1.2px;
     margin: 5px 0;
 }
 .buy-text {
     grid-area: buy-text;
     line-height: 1.2;
+    text-align: center;
     letter-spacing: 1.2px;
     width: 80%;
     margin: 10px 0;
@@ -576,6 +578,9 @@ a.youtube-link:hover {
     font-weight: bold;
     font-family: var(--fontPoppins);
 }
+.form-input #date {
+    text-indent: 8px;
+}
 .form-input input,
 .form-input textarea {
     margin-bottom: 15px;
@@ -587,6 +592,7 @@ a.youtube-link:hover {
     background-color: rgba(93,153,198,0.1);
 }
 .form-input input::placeholder,
+.form-input #date,
 .form-input textarea::placeholder {
     color: var(--paulBlueDark);
 }
@@ -777,7 +783,7 @@ footer ul li:hover .itunes {
             left: 5em;
         }
         100% {
-            left: -480em;
+            left: -482em;
         }
     }
 }
